@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro; // ← Add this!
 
 public class TaskManager : MonoBehaviour
 {
@@ -11,7 +12,10 @@ public class TaskManager : MonoBehaviour
     
     [Header("UI References")]
     public GameObject dayCompletePanel;
-    public UnityEngine.UI.Text dayCompleteText;
+    public TMP_Text dayCompleteText; // ← Change to TMP_Text!
+    
+    // ... rest of your code stays the same
+
     
     void Awake()
     {

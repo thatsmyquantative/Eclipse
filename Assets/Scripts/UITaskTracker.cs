@@ -1,14 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // ← Add this!
 
 public class UITaskTracker : MonoBehaviour
 {
     public static UITaskTracker Instance;
     
     [Header("UI Elements")]
-    public GameObject interactPrompt; // The "E" text
-    public Slider progressBar; // The progress bar
-    public UnityEngine.UI.Text taskText; // Full path // "Tasks: 1/3" text
+    public GameObject interactPrompt; 
+    public Slider progressBar;
+    public TMP_Text taskText; // ← Change from Text to TMP_Text!
     
     void Awake()
     {
@@ -18,7 +19,6 @@ public class UITaskTracker : MonoBehaviour
         }
     }
     
-    // Simple methods that we can expand later
     public void ShowInteractPrompt(bool show)
     {
         if (interactPrompt != null)
